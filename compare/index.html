@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Pursuit Health Design Concepts</title>
+<style>
+  :root { --ink:#1f2430; --muted:#5b6472; --line:#e7e3da; --accent:#FF5B00; --bg:#ffffff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; color: var(--ink); background: var(--bg); display: flex; flex-direction: column; }
+  header { padding: 18px 22px 0; border-bottom: 1px solid var(--line); }
+  .brand { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  h1 { font-size: 22px; margin: 4px 0 6px; font-weight: 700; }
+  .lead { font-size: 14px; line-height: 1.55; color: var(--muted); max-width: 760px; }
+  .lead b { color: var(--ink); font-weight: 600; }
+  .tabs { display: flex; gap: 6px; margin: 14px 0 0; flex-wrap: wrap; }
+  .tabs button { font: inherit; font-size: 14px; font-weight: 600; color: var(--muted); background: #f6f4ef; border: 1px solid var(--line); border-bottom: none; padding: 10px 18px; border-radius: 10px 10px 0 0; cursor: pointer; }
+  .tabs button.active { color: var(--ink); background: #fff; box-shadow: 0 -2px 0 var(--accent) inset; }
+  .subbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 2px; flex-wrap: wrap; }
+  .palette { font-size: 13px; color: var(--muted); }
+  .palette .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; vertical-align: -1px; margin-right: 7px; border: 1px solid rgba(0,0,0,.15); }
+  .fs { font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; white-space: nowrap; }
+  .fs:hover { text-decoration: underline; }
+  main { flex: 1; min-height: 0; background: #f6f4ef; }
+  iframe { width: 100%; height: 100%; border: 0; display: block; background: #fff; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Pursuit Health</div>
+  <h1>Three design directions</h1>
+  <p class="lead">Here are the three directions in one place. Click between them, and open any one full screen. As you look, note the parts you would want on your own site: the hero, how each one explains ICHRA, the pricing layout, and the way it handles the Truemed side. <b>Tell us the pieces you like from each, and we will bring your favorites together into the final design.</b></p>
+  <nav class="tabs" id="tabs">
+    <button data-c="1" class="active">Concept 1</button>
+    <button data-c="2">Concept 2</button>
+    <button data-c="3">Concept 3</button>
+  </nav>
+  <div class="subbar">
+    <span class="palette" id="palette"><span class="dot" style="background:#06080f"></span>Dark, high-contrast palette</span>
+    <a class="fs" id="fs" href="concept-1.html" target="_blank" rel="noopener">Open this concept full screen &rarr;</a>
+  </div>
+</header>
+<main>
+  <iframe id="stage" src="concept-1.html" title="Design concept"></iframe>
+</main>
+<script>
+  var data = {
+    "1": { src: "concept-1.html", dot: "#06080f", label: "Dark, high-contrast palette" },
+    "2": { src: "concept-2.html", dot: "#183B43", label: "Deep teal palette" },
+    "3": { src: "../Pursuit%20Homepage.dc.html", dot: "#22284A", label: "Light, cobalt-on-bone palette" }
+  };
+  var tabs = document.getElementById("tabs");
+  var stage = document.getElementById("stage");
+  var fs = document.getElementById("fs");
+  var palette = document.getElementById("palette");
+  tabs.addEventListener("click", function (e) {
+    var btn = e.target.closest("button");
+    if (!btn) return;
+    var c = btn.getAttribute("data-c");
+    var d = data[c];
+    Array.prototype.forEach.call(tabs.children, function (b) { b.classList.remove("active"); });
+    btn.classList.add("active");
+    stage.src = d.src;
+    fs.href = d.src;
+    palette.innerHTML = '<span class="dot" style="background:' + d.dot + '"></span>' + d.label;
+  });
+</script>
+</body>
+</html>
