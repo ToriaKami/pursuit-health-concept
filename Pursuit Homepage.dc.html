@@ -10,7 +10,7 @@
 <x-dc>
 <helmet>
 <link rel="stylesheet" href="assets/fonts.css">
-<title>Pursuit Health — a calmer way to handle your renewal</title>
+<title>Pursuit Health: a calmer way to handle your renewal</title>
 <meta name="description" content="Set a health budget you can plan around, and let your team choose the plan that fits their life. Priced honestly against what you have now.">
 <style>
   body{margin:0;background:#FBF8F1;-webkit-font-smoothing:antialiased}
@@ -64,7 +64,7 @@
       <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem clamp(1.5rem,4vw,2.75rem)">
         <a href="#" title="Aetna" style="display:grid;place-items:center;width:130px;height:48px"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Aetna_logo.svg" alt="Aetna" style="max-width:100%;max-height:26px;object-fit:contain;filter:grayscale(1);opacity:.5;transition:filter .2s ease,opacity .2s ease" style-hover="filter:grayscale(0);opacity:1" /></a>
         <a href="#" title="Anthem" style="display:grid;place-items:center;width:130px;height:48px"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Anthem_Inc_logo.png" alt="Anthem" style="max-width:100%;max-height:30px;object-fit:contain;filter:grayscale(1);opacity:.5;transition:filter .2s ease,opacity .2s ease" style-hover="filter:grayscale(0);opacity:1" /></a>
-        <a href="#" title="Blue Cross — wordmark set in type until we have the real mark" style="display:grid;place-items:center;width:130px;height:48px;font-family:Sentient,Georgia,serif;font-size:1.375rem;letter-spacing:-.015em;color:#A9A28E;opacity:.75;transition:color .2s ease,opacity .2s ease" style-hover="color:#0072CE;opacity:1">Blue Cross</a>
+        <a href="#" title="Blue Cross" style="display:grid;place-items:center;width:130px;height:48px;font-family:Sentient,Georgia,serif;font-size:1.375rem;letter-spacing:-.015em;color:#A9A28E;opacity:.75;transition:color .2s ease,opacity .2s ease" style-hover="color:#0072CE;opacity:1">Blue Cross</a>
         <a href="#" title="Cigna" style="display:grid;place-items:center;width:130px;height:48px"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cigna_Logo.png" alt="Cigna" style="max-width:100%;max-height:44px;object-fit:contain;filter:grayscale(1);opacity:.5;transition:filter .2s ease,opacity .2s ease" style-hover="filter:grayscale(0);opacity:1" /></a>
         <a href="#" title="Oscar Health" style="display:grid;place-items:center;width:130px;height:48px"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Oscar_Health_logo.svg" alt="Oscar Health" style="max-width:100%;max-height:24px;object-fit:contain;filter:grayscale(1);opacity:.5;transition:filter .2s ease,opacity .2s ease" style-hover="filter:grayscale(0);opacity:1" /></a>
         <a href="#" title="UnitedHealthcare" style="display:grid;place-items:center;width:130px;height:48px"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/UnitedHealthcare_(logo).svg" alt="UnitedHealthcare" style="max-width:100%;max-height:30px;object-fit:contain;filter:grayscale(1);opacity:.5;transition:filter .2s ease,opacity .2s ease" style-hover="filter:grayscale(0);opacity:1" /></a>
@@ -271,17 +271,6 @@
     <div style="max-width:1160px;margin-inline:auto;padding:1.25rem clamp(1.25rem,4vw,2.5rem) 1.75rem;margin-top:2.5rem;border-top:1px dashed #D9D2C2;font-size:.8125rem;color:#8A8471">Concept mockup prepared for review. Not a live site.</div>
   </footer>
 
-  <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
-    <aside style="background:#1E1B19;color:#C9C2B8;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.9375rem;line-height:1.6">
-      <div style="max-width:1160px;margin-inline:auto;padding:2.5rem clamp(1.25rem,4vw,2.5rem)">
-        <h4 style="margin:0 0 .875rem;color:#fff;font-size:1rem;font-weight:600">Hearth rollout — the whole site</h4>
-        <div style="display:grid;gap:.5rem;max-width:82ch">
-          <p style="margin:0"><strong style="color:#fff">All eleven pages now share the Hearth system:</strong> warm cream paper, arched photographs, rounded cards, dashed hairlines, pill chips, circled numbers, and the rounded indigo band for every closing ask. The blue you chose stays on every button and accent.</p>
-          <p style="margin:0"><strong style="color:#fff">Carrier logos are the real marks</strong> where Wikimedia has them; Blue Cross is set in type until Jordan sends the real files. Still stand-ins: both photographs, the testimonial, the Calendly embed, and the 78–92 percent estimator band.</p>
-        </div>
-      </div>
-    </aside>
-  </sc-if>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Review&quot;},&quot;feeMonthly&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:40,&quot;min&quot;:0,&quot;max&quot;:150,&quot;unit&quot;:&quot;$/mo&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Estimator assumptions&quot;},&quot;bandLow&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:0.78,&quot;min&quot;:0.5,&quot;max&quot;:1,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Estimator assumptions&quot;},&quot;bandHigh&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:0.92,&quot;min&quot;:0.5,&quot;max&quot;:1.2,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Estimator assumptions&quot;}}">
